@@ -1,0 +1,22 @@
+{
+  "name": "root",
+  "private": true,
+  "version": "0.0.3",
+  "license": "Apache-2.0",
+  "repository": "NCI-GDC/portal-ui",
+  "engines": {
+    "node": ">=5"
+  },
+  "author": {
+    "name": "OICR",
+    "url": "https://github.com/NCI-GDC/"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@ncigdc/humanbody-react": "^0.0.1"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
+  }
+}

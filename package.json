@@ -1,0 +1,20 @@
+{
+  "name": "visualizations",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "lerna bootstrap --yes",
+    "start": "make server",
+    "test": "make test-once"
+  },
+  "devDependencies": {
+    "@ncigdc/buildjs": "0.2.3",
+    "lerna": "2.0.0-beta.29"
+  },
+  "dependencies": {
+    "d3": "4.2.7",
+    "react": "15.3.2",
+    "react-dom": "15.3.2"
+  }
+}
