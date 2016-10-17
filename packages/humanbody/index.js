@@ -3,6 +3,7 @@
 import * as d3 from 'd3';
 
 import RawSvg from './raw-svg';
+
 import colorCodes from './colorCodes';
 
 import type { TConfig } from './types';
