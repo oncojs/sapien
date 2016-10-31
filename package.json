@@ -1,5 +1,5 @@
 {
-  "name": "visualizations",
+  "name": "@oncojs/sapien",
   "version": "0.2.1",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "start": "make server",
     "test": "make test-once"
   },
-  "repository": "NCI-GDC/human-body-vis",
+  "repository": "oncojs/sapien",
   "devDependencies": {
     "@ncigdc/buildjs": "0.2.3",
     "lerna": "2.0.0-beta.29"
