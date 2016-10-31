@@ -1,7 +1,7 @@
 {
   "name": "root",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.2.1",
   "license": "Apache-2.0",
   "repository": "NCI-GDC/portal-ui",
   "engines": {
@@ -13,7 +13,7 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@ncigdc/humanbody-react": "^0.0.1"
+    "@ncigdc/humanbody-react": "^0.2.1"
   },
   "peerDependencies": {
     "react": "^15.0.0",
