@@ -1,6 +1,6 @@
 {
   "name": "@oncojs/react-sapien",
-  "version": "0.2.1",
+  "version": "0.3.1",
   "description": "Organ Map of Human Body",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
     "url": "https://github.com/oncojs/sapien/issues"
   },
   "dependencies": {
-    "@oncojs/sapien": "^0.2.1"
+    "@oncojs/sapien": "^0.3.1"
   },
   "peerDependencies": {
     "react": "^15.0.0"
