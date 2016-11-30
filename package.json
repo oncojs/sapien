@@ -1,21 +1,31 @@
 {
-  "name": "@oncojs/sapien",
+  "private": true,
   "version": "0.3.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "postinstall": "lerna bootstrap --yes",
-    "start": "make server",
-    "test": "make test-once"
-  },
+  "license": "Apache-2.0",
   "repository": "oncojs/sapien",
-  "devDependencies": {
-    "@ncigdc/buildjs": "0.2.3",
-    "lerna": "2.0.0-beta.29"
+  "author": {
+    "name": "OncoJS",
+    "url": "https://github.com/oncojs/"
+  },
+  "scripts": {
+    "knit": "knit",
+    "start": "knit server",
+    "lint": "eslint --ext .js modules/node_modules || exit 0"
+  },
+  "peerDependencies": {
+    "d3": "*",
+    "react": "*"
   },
   "dependencies": {
     "d3": "4.2.7",
-    "react": "15.3.2",
-    "react-dom": "15.3.2"
+    "react": "15.3.2"
+  },
+  "devDependencies": {
+    "@knit/babel-preset-socks-react": "^0.0.46",
+    "@knit/eslint-config-socks-react": "^0.0.43",
+    "@knit/knit": "^0.0.49",
+    "babel-cli": "^6.18.0",
+    "eslint": "^3.11.1",
+    "react-dom": "^15.4.1"
   }
 }
