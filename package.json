@@ -17,15 +17,15 @@
     "react": "*"
   },
   "dependencies": {
-    "d3": "4.2.7",
-    "react": "15.3.2"
+    "d3": "^4.4.1",
+    "react": "^15.4.2"
   },
   "devDependencies": {
-    "@knit/babel-preset-socks-react": "^0.0.46",
-    "@knit/eslint-config-socks-react": "^0.0.43",
-    "@knit/knit": "^0.0.49",
+    "@knit/babel-preset-socks-react": "^0.1.4",
+    "@knit/eslint-config-socks-react": "^0.1.4",
+    "@knit/knit": "^0.1.4",
     "babel-cli": "^6.18.0",
-    "eslint": "^3.11.1",
-    "react-dom": "^15.4.1"
+    "eslint": "^3.13.1",
+    "react-dom": "^15.4.2"
   }
 }
