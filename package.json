@@ -1,31 +1,66 @@
 {
+  "name": "",
   "private": true,
   "version": "0.4.2",
   "license": "Apache-2.0",
   "repository": "oncojs/sapien",
+  "homepage": "https://oncojs.github.io/sapien",
   "author": {
     "name": "OncoJS",
     "url": "https://github.com/oncojs/"
   },
   "scripts": {
+    "precommit": "lint-staged",
+    "flow": "flow check",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
     "knit": "knit",
-    "start": "knit server",
-    "lint": "eslint --ext .js modules/node_modules || exit 0"
+    "knit:clean": "rm -rf dist",
+    "knit:copy": "knit copy --ignore-path=@oncojs/**/{__mocks__,__tests__,*.js}",
+    "knit:stitch": "knit stitch --parallel --scope unpublished",
+    "knit:build:es6": "NODE_ENV=production knit exec --parallel --scope unpublished --label 'Building ES6' -- babel . -d ROOT_DIR/dist/KNIT_MODULE_NAME/es6 --ignore tests,mocks",
+    "knit:build:cjs": "NODE_ENV=production knit exec --parallel --scope unpublished --label 'Building CJS' -- babel --plugins transform-es2015-modules-commonjs . -d ROOT_DIR/dist/KNIT_MODULE_NAME --ignore tests,mocks",
+    "knit:build:umd": "NODE_ENV=production knit exec --parallel --scope unpublished --label 'Building UMD' -- rollup -c ROOT_DIR/rollup.config.js -i ROOT_DIR/dist/KNIT_MODULE_NAME/es6/index.js -o ROOT_DIR/dist/KNIT_MODULE_NAME/umd/index.min.js -n KNIT_MODULE_NAME",
+    "knit:build": "run-s knit:clean knit:copy knit:build:es6 knit:build:cjs knit:build:umd knit:stitch",
+    "preknit:publish": "npm run knit:build",
+    "knit:publish": "knit exec --label 'Publishing' --scope unpublished --working-dir dist -- npm publish --access public",
+    "preversion": "knit validate",
+    "version": "knit exec --label 'Versioning' --scope modified -- npm version --no-git-tag-version $npm_package_version && git add .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "release": "npm version",
+    "postrelease": "run-s knit:publish deploy"
   },
-  "peerDependencies": {
-    "d3": "*",
-    "react": "*"
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "dependencies": {
-    "d3": "^4.4.1",
-    "react": "^15.4.2"
+    "d3": "4.9.1",
+    "react": "15.5.4"
   },
   "devDependencies": {
-    "@knit/babel-preset-socks-react": "^0.1.4",
-    "@knit/eslint-config-socks-react": "^0.1.4",
-    "@knit/knit": "^0.1.4",
-    "babel-cli": "^6.18.0",
-    "eslint": "^3.13.1",
-    "react-dom": "^15.4.2"
+    "@knit/knit": "^0.6.0",
+    "babel-cli": "6.24.1",
+    "eslint-config-prettier": "2.1.1",
+    "eslint-plugin-prettier": "2.1.1",
+    "flow-bin": "^0.47.0",
+    "gh-pages": "1.0.0",
+    "husky": "0.13.3",
+    "lint-staged": "^3.5.0",
+    "npm-run-all": "4.0.2",
+    "prettier": "1.3.1",
+    "react-dom": "15.5.4",
+    "react-scripts": "1.0.6",
+    "rollup": "0.41.6",
+    "rollup-plugin-commonjs": "8.0.2",
+    "rollup-plugin-node-resolve": "3.0.0",
+    "rollup-plugin-prepack": "1.0.0",
+    "rollup-plugin-replace": "1.1.1",
+    "rollup-plugin-uglify": "2.0.1",
+    "uglify-es": "3.0.11"
   }
 }

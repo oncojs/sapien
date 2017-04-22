@@ -1020,4 +1020,4 @@ export default ({ height, width } = {}) => `
       </svg>
     </div>
   </span>
-`
+`;

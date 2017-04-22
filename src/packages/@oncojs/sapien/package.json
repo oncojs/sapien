@@ -1,0 +1,10 @@
+{
+  "name": "@oncojs/sapien",
+  "version": "0.4.2",
+  "description": "Organ Map of Human Body",
+  "module": "es6/index.js",
+  "unpkg": "umd/index.min.js",
+  "peerDependencies": {
+    "d3": "*"
+  }
+}

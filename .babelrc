@@ -1,3 +1,3 @@
 {
-  "presets": ["@knit/socks-react"]
+  "presets": ["react-app"]
 }

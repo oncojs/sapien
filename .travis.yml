@@ -1,6 +1,13 @@
+---
+git:
+  depth: 10
 language: node_js
 node_js:
-- "6"
+  - "6"
 cache: yarn
+notification:
+  email: false
+install:
+  - yarn
 script:
   - yarn lint
