@@ -13,5 +13,5 @@ export type TConfig = {|
   offsetTop?: number,
   primarySiteKey?: string,
   selector?: string,
-  width?: number,
+  width?: number
 |};

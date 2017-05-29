@@ -1,0 +1,15 @@
+{
+  "short_name": "OncoJS:Sapien",
+  "name": "OncoJS:Sapien",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "200x200",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
