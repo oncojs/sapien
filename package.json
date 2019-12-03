@@ -25,7 +25,7 @@
     "@knit/eslint-config-socks-react": "^0.1.4",
     "@knit/knit": "^0.1.4",
     "babel-cli": "^6.18.0",
-    "eslint": "^3.13.1",
+    "eslint": "^4.18.2",
     "react-dom": "^15.4.2"
   }
 }
