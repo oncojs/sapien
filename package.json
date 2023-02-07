@@ -17,15 +17,20 @@
     "react": "*"
   },
   "dependencies": {
-    "d3": "^4.4.1",
-    "react": "^15.4.2"
+    "d3": "^6.7.0",
+    "react": "^17.0.2"
   },
   "devDependencies": {
-    "@knit/babel-preset-socks-react": "^0.1.4",
-    "@knit/eslint-config-socks-react": "^0.1.4",
-    "@knit/knit": "^0.1.4",
-    "babel-cli": "^6.18.0",
-    "eslint": "^3.13.1",
-    "react-dom": "^15.4.2"
+    "@knit/babel-preset-socks-react": "^0.5.0",
+    "@knit/eslint-config-socks-react": "^0.2.0",
+    "@knit/knit": "^0.8.16",
+    "babel-cli": "^6.26.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "react-dom": "^17.0.2"
   }
 }
